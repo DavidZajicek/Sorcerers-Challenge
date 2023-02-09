@@ -10,7 +10,7 @@ script = ExtResource( 1 )
 bullet_scene = ExtResource( 4 )
 random_angle_degrees = 50.0
 max_range = 2000.0
-max_bullet_speed = 1500.0
+max_bullet_speed = 100.0
 fire_rate = 1.0
 
 [node name="HandLeft" parent="." index="1"]
