@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://spells/fire_basic/SpellBasicFire.gd" type="Script" id=1]
+[ext_resource path="res://spells/Spell.tscn" type="PackedScene" id=2]
+[ext_resource path="res://bullets/fire_ball/Fireball.tscn" type="PackedScene" id=3]
+
+[node name="SpellFireRapid" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+bullet_scene = ExtResource( 3 )
+random_angle_degrees = 35.0
+fire_rate = 15.0
