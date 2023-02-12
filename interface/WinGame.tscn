@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://interface/theme/Interface.theme" type="Theme" id=1]
 [ext_resource path="res://interface/WinGame.gd" type="Script" id=2]
 [ext_resource path="res://interface/MenuBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://interface/theme/title_font_large.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Main.tscn" type="PackedScene" id=5]
 
 [node name="WinGame" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
+main = ExtResource( 5 )
 
 [node name="MenuBackground" parent="." instance=ExtResource( 3 )]
 margin_right = 3.0

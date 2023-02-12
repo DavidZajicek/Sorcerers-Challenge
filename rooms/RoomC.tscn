@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://rooms/spawners/SpawnerMob.tscn" type="PackedScene" id=1]
+[ext_resource path="res://rooms/BaseRoom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://rooms/spawners/SpawnerPickup.tscn" type="PackedScene" id=3]
+
+[node name="RoomC" instance=ExtResource( 2 )]
+
+[node name="Floor" parent="." index="1"]
+tile_data = PoolIntArray( 4, 3, 0, 5, 3, 65536, 6, 3, 65536, 7, 3, 2, 65540, 3, 65536, 65541, 3, 65536, 65542, 3, 131074, 65543, 3, 65536, 131076, 3, 65536, 131077, 3, 65536, 131078, 3, 65536, 131079, 3, 65536, 196612, 3, 65536, 196613, 3, 65538, 196614, 3, 65538, 196615, 3, 65536, 262144, 3, 0, 262145, 3, 65536, 262146, 3, 65536, 262147, 3, 65536, 262148, 3, 65536, 262149, 3, 65538, 262150, 3, 131074, 262151, 3, 65536, 262152, 3, 65536, 262153, 3, 65536, 262154, 3, 2, 327680, 3, 262147, 327681, 3, 65540, 327682, 3, 131076, 327683, 3, 262148, 327684, 3, 65536, 327685, 3, 65536, 327686, 3, 65536, 327687, 3, 65536, 327688, 3, 196612, 327689, 3, 196612, 327690, 3, 262149, 393220, 3, 65536, 393221, 3, 65538, 393222, 3, 131072, 393223, 3, 65536, 458756, 3, 65536, 458757, 3, 131072, 458758, 3, 65538, 458759, 3, 65536, 524292, 3, 65536, 524293, 3, 65536, 524294, 3, 196609, 524295, 3, 65536, 589828, 3, 65536, 589829, 3, 131074, 589830, 3, 131074, 589831, 3, 65536, 655364, 3, 65539, 655365, 3, 131076, 655366, 3, 196612, 655367, 3, 262149 )
+
+[node name="Details" parent="." index="2"]
+tile_data = PoolIntArray( 7, 4, 1, 65541, 4, 65536, 131076, 4, 65538, 196612, 2, 65536, 196613, 2, 65537, 196614, 2, 196612, 196615, 2, 65538, 262146, 4, 1, 262148, 2, 131072, 262149, 2, 131073, 262150, 2, 131073, 262151, 2, 131074, 262152, 4, 1, 327684, 2, 131072, 327685, 2, 131073, 327686, 2, 131073, 327687, 2, 131075, 393220, 2, 196608, 393221, 2, 65540, 393222, 2, 65540, 393223, 2, 196610, 524295, 4, 0, 589828, 4, 2 )
+
+[node name="Walls" parent="." index="3"]
+tile_data = PoolIntArray(  )
+
+[node name="Limits" parent="." index="4"]
+tile_data = PoolIntArray( -131068, 1, 0, -131065, 1, 0, -65533, 1, 0, -65532, 1, 0, -65529, 1, 0, -65528, 1, 0, 3, 1, 0, 8, 1, 0, 65539, 1, 0, 65544, 1, 0, 131075, 1, 0, 131080, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 458750, 1, 0, 458751, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 458755, 1, 0, 458760, 1, 0, 524291, 1, 0, 524296, 1, 0, 589827, 1, 0, 589832, 1, 0, 655363, 1, 0, 655364, 0, 0, 655367, 0, 0, 655368, 1, 0, 720899, 1, 0, 720900, 1, 0, 720903, 1, 0, 720904, 1, 0, 786436, 1, 0, 786439, 1, 0 )
+
+[node name="SpawnerMob" parent="Mobs" index="0" instance=ExtResource( 1 )]
+position = Vector2( 1317, 617 )
+
+[node name="SpawnerMob2" parent="Mobs" index="1" instance=ExtResource( 1 )]
+position = Vector2( 99, 610 )
+
+[node name="SpawnerMob4" parent="Mobs" index="2" instance=ExtResource( 1 )]
+position = Vector2( 701, 82 )
+
+[node name="SpawnerMob6" parent="Mobs" index="3" instance=ExtResource( 1 )]
+position = Vector2( 840, 82 )
+
+[node name="SpawnerMob3" parent="Mobs" index="4" instance=ExtResource( 1 )]
+position = Vector2( 833, 1210 )
+
+[node name="SpawnerMob5" parent="Mobs" index="5" instance=ExtResource( 1 )]
+position = Vector2( 669, 1208 )
+
+[node name="SpawnerPickup" parent="Mobs" index="6" instance=ExtResource( 3 )]
+position = Vector2( 777, 1006 )
+
+[node name="SpawnerPickup2" parent="Mobs" index="7" instance=ExtResource( 3 )]
+position = Vector2( 781, 374 )
+
+[node name="SpawnerRobot" parent="." index="7"]
+position = Vector2( 651, 518 )
+
+[node name="SpawnerTeleporter" parent="." index="8"]
+position = Vector2( 875, 747 )

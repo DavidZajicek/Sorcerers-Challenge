@@ -1,17 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://rooms/assets/tileset_floating_dungeon.tres" type="TileSet" id=1]
-[ext_resource path="res://robot/Robot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://pickups/ice_spells/PickupIceSpell.tscn" type="PackedScene" id=3]
+[ext_resource path="res://rooms/spawners/SpawnerRobot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://rooms/spawners/SpawnerTeleporter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://rooms/assets/tileset_inivisible_walls.tres" type="TileSet" id=4]
-[ext_resource path="res://mobs/dummy/Dummy.tscn" type="PackedScene" id=5]
-[ext_resource path="res://pickups/fire_spells/PickupFireSpell.tscn" type="PackedScene" id=6]
-[ext_resource path="res://pickups/ice_spells/PickupSprayIceSpell.tscn" type="PackedScene" id=7]
-[ext_resource path="res://rooms/spawners/SpawnerMob.tscn" type="PackedScene" id=8]
-[ext_resource path="res://rooms/TestRoom.gd" type="Script" id=10]
+[ext_resource path="res://rooms/BaseRoom.gd" type="Script" id=5]
 
-[node name="TestRoom" type="YSort"]
-script = ExtResource( 10 )
+[node name="BaseRoom" type="YSort"]
+script = ExtResource( 5 )
 
 [node name="bridges" type="TileMap" parent="."]
 z_index = -10
@@ -70,34 +66,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="SpawnerMob" parent="Mobs" instance=ExtResource( 8 )]
-position = Vector2( 953, 803 )
-
 [node name="Items" type="Node2D" parent="."]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = -548.0
-margin_top = -501.0
-margin_right = 148.0
-margin_bottom = -161.0
-text = "TEST ROOM
+[node name="SpawnerRobot" parent="." instance=ExtResource( 2 )]
+position = Vector2( 339, 412 )
 
-use this room to test the different mechanics. "
-
-[node name="Robot" parent="." instance=ExtResource( 2 )]
-position = Vector2( 383, 380 )
-
-[node name="Dummy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 979, 318 )
-
-[node name="PickupIceSpell" parent="." instance=ExtResource( 3 )]
-position = Vector2( 317, 697 )
-
-[node name="PickupFireSpell" parent="." instance=ExtResource( 6 )]
-position = Vector2( 319, 821 )
-
-[node name="PickupSprayIceSpell" parent="." instance=ExtResource( 7 )]
-position = Vector2( 189, 691 )
+[node name="SpawnerTeleporter" parent="." instance=ExtResource( 3 )]
+position = Vector2( 964, 826 )

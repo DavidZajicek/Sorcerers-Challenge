@@ -40,6 +40,7 @@ func shoot_at_target(target: Node2D) -> void:
 	bullet.max_range = max_range
 	bullet.speed = bullet_speed
 	bullet.collision_mask = collision_mask
+	bullet.set_collision_mask_bit(4, true)
 	# We exported the angle in degrees because it's easier to edit in the
 	# inspector, but the randomize_rotation() function needs the angle in
 	# radians, so we convert the angles with deg2rad().
